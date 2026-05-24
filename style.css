@@ -106,10 +106,12 @@ nav {
   text-decoration: none;
   border-radius: 8px;
   font-weight: bold;
+  transition: background 0.25s ease, transform 0.25s ease;
 }
 
 .hero-buttons a:hover {
   background: #1d4ed8;
+  transform: translateY(-2px);
 }
 
 /* Profile Image */
@@ -177,6 +179,16 @@ nav {
   color: #333;
 }
 
+.about-info a {
+  color: #333;
+  text-decoration: none;
+}
+
+.about-info a:hover {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
 .about-text {
   background: white;
   border: 1px solid #e5e5e5;
@@ -208,6 +220,13 @@ nav {
   padding: 24px;
   min-width: 0;
   box-shadow: 0 10px 24px rgba(15, 23, 42, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.skill-group:hover {
+  transform: translateY(-5px);
+  border-color: #bfdbfe;
+  box-shadow: 0 18px 36px rgba(15, 23, 42, 0.08);
 }
 
 .skill-group:last-child {
@@ -279,6 +298,13 @@ nav {
   min-width: 0;
   min-height: 100%;
   box-shadow: 0 10px 24px rgba(15, 23, 42, 0.04);
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  border-color: #bfdbfe;
+  box-shadow: 0 22px 44px rgba(15, 23, 42, 0.12);
 }
 
 .project-image {
@@ -289,6 +315,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .project-image span {
@@ -297,12 +324,22 @@ nav {
   font-size: 18px;
   text-align: center;
   padding: 0 18px;
+  transition: transform 0.28s ease;
+}
+
+.project-card:hover .project-image span {
+  transform: scale(1.06);
 }
 
 .project-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.28s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.06);
 }
 
 .project-content {
@@ -359,44 +396,12 @@ nav {
   text-decoration: none;
   font-size: 13px;
   font-weight: 700;
+  transition: background 0.25s ease, transform 0.25s ease;
 }
 
 .project-links a:hover {
   background: #2563eb;
-}
-
-/* Contact */
-
-.contact-box {
-  background: white;
-  border: 1px solid #e5e5e5;
-  border-radius: 14px;
-  padding: 24px;
-}
-
-.contact-box p {
-  display: grid;
-  grid-template-columns: 100px 1fr;
-  gap: 16px;
-  margin-bottom: 14px;
-}
-
-.contact-box p:last-child {
-  margin-bottom: 0;
-}
-
-.contact-box strong {
-  color: #2563eb;
-}
-
-.contact-box a {
-  color: #333;
-  text-decoration: none;
-}
-
-.contact-box a:hover {
-  color: #2563eb;
-  text-decoration: underline;
+  transform: translateY(-2px);
 }
 
 /* Footer */
@@ -417,6 +422,14 @@ footer p {
 @media (max-width: 900px) {
   .project-grid {
     grid-template-columns: 1fr;
+  }
+
+  .skill-groups {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-group:last-child {
+    grid-column: auto;
   }
 }
 
@@ -539,11 +552,6 @@ footer p {
 
   .project-card h4 {
     font-size: 20px;
-  }
-
-  .contact-box p {
-    grid-template-columns: 1fr;
-    gap: 4px;
   }
 }
 
