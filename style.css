@@ -47,6 +47,14 @@ nav {
   max-width: 1000px;
   margin: 0 auto;
   padding: 100px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.hero-text {
+  flex: 1;
 }
 
 .hero .tag {
@@ -56,8 +64,9 @@ nav {
 }
 
 .hero h2 {
-  font-size: 42px;
+  font-size: 40px;
   margin-bottom: 20px;
+  line-height: 1.3;
 }
 
 .hero p {
@@ -78,6 +87,15 @@ nav {
   color: white;
   text-decoration: none;
   border-radius: 8px;
+}
+
+.hero-image img {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .section {
@@ -124,4 +142,39 @@ footer {
   padding: 30px;
   background: #111827;
   color: white;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 70px 20px;
+  }
+
+  .hero h2 {
+    font-size: 30px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-image img {
+    width: 200px;
+    height: 200px;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-menu {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
