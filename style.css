@@ -312,11 +312,11 @@ footer p {
     font-size: 28px;
   }
 
-  .hero-image img {
-    width: 220px;
-    height: 220px;
-    object-position: center 14%;
-  }
+.hero-image img {
+  width: 210px;
+  height: 210px;
+  object-position: center 14%;
+}
 
   .hero-buttons {
     flex-direction: row;
