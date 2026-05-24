@@ -197,21 +197,14 @@ nav {
 
 .skill-groups {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
+  gap: 22px;
 }
 
 .skill-group {
   background: white;
   border: 1px solid #e5e5e5;
-  border-radius: 16px;
+  border-radius: 14px;
   padding: 24px;
-  display: flex;
-  flex-direction: column;
-}
-
-.skill-group-header {
-  margin-bottom: 18px;
 }
 
 .skill-group h3 {
@@ -221,17 +214,16 @@ nav {
 }
 
 .skill-group p {
-  font-size: 15.5px;
+  font-size: 16px;
   color: #555;
+  margin-bottom: 18px;
   line-height: 1.7;
-  margin-bottom: 0;
 }
 
 .skill-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: auto;
 }
 
 .skill-tags span {
@@ -247,18 +239,20 @@ nav {
 /* Projects */
 
 .project-category {
-  margin-bottom: 58px;
+  margin-bottom: 54px;
 }
 
 .project-category > h3 {
-  font-size: 24px;
+  font-size: 25px;
   margin-bottom: 22px;
   color: #111827;
+  letter-spacing: -0.4px;
 }
 
+/* 이 부분이 핵심: PC에서 프로젝트 카드 2개씩 */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px;
 }
 
@@ -269,20 +263,39 @@ nav {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  min-height: 100%;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.04);
 }
 
 .project-image {
   width: 100%;
   height: 190px;
-  background: #e5e7eb;
+  background: #eef2ff;
+  border-bottom: 1px solid #e5e5e5;
+  position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .project-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: none;
+}
+
+.project-image img[src] {
   display: block;
+}
+
+.project-image span {
+  position: absolute;
+  color: #64748b;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.5px;
 }
 
 .project-content {
@@ -293,66 +306,52 @@ nav {
 }
 
 .project-label {
-  display: inline-block;
-  width: fit-content;
-  margin-bottom: 12px;
-  padding: 6px 10px;
-  background: #eff6ff;
-  color: #2563eb;
-  border-radius: 999px;
-  font-size: 13px;
-  font-weight: 700;
+  font-size: 13px !important;
+  color: #2563eb !important;
+  font-weight: 800;
+  margin-bottom: 8px !important;
 }
 
-.project-content h4 {
-  font-size: 20px;
-  line-height: 1.45;
-  margin-bottom: 12px;
+.project-card h4 {
+  font-size: 21px;
+  line-height: 1.4;
   color: #111827;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
   word-break: keep-all;
 }
 
-.project-content p {
+.project-card p {
   font-size: 15.5px;
   line-height: 1.75;
   color: #444;
-  margin-bottom: 12px;
-}
-
-.project-content ul {
-  padding-left: 18px;
-  margin: 4px 0 14px;
-}
-
-.project-content li {
-  font-size: 15px;
-  line-height: 1.7;
-  color: #444;
-  margin-bottom: 4px;
   word-break: keep-all;
 }
 
-.tech {
+.project-tech {
+  margin-top: 8px;
   color: #2563eb !important;
   font-weight: 700;
-  margin-top: auto;
+  font-size: 14.5px !important;
 }
 
 .project-links {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 14px;
+  margin-top: auto;
+  padding-top: 16px;
 }
 
 .project-links a {
+  display: inline-block;
   padding: 8px 12px;
+  border-radius: 999px;
   background: #111827;
   color: white;
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: 700;
   text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
 }
 
 .project-links a:hover {
@@ -496,10 +495,6 @@ footer p {
     font-size: 16px;
   }
 
-  .skill-groups {
-    grid-template-columns: 1fr;
-  }
-
   .skill-group {
     padding: 20px;
   }
@@ -517,8 +512,13 @@ footer p {
     padding: 7px 10px;
   }
 
+  /* 모바일에서는 프로젝트 카드 1개씩 */
   .project-grid {
     grid-template-columns: 1fr;
+  }
+
+  .project-category > h3 {
+    font-size: 23px;
   }
 
   .project-image {
@@ -529,13 +529,8 @@ footer p {
     padding: 20px;
   }
 
-  .project-content h4 {
-    font-size: 19px;
-  }
-
-  .project-content p,
-  .project-content li {
-    font-size: 15px;
+  .project-card h4 {
+    font-size: 20px;
   }
 
   .contact-box p {
@@ -580,5 +575,9 @@ footer p {
 
   .hero-buttons a {
     padding: 11px 16px;
+  }
+
+  .project-image {
+    height: 165px;
   }
 }
