@@ -119,10 +119,10 @@ nav {
 }
 
 .hero-image img {
-  width: 285px;
-  height: 285px;
+  width: 270px;
+  height: 270px;
   object-fit: cover;
-  object-position: center 10%;
+  object-position: center 14%;
   border-radius: 50%;
   border: 6px solid white;
   background: white;
