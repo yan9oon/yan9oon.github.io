@@ -540,7 +540,7 @@ nav {
 
   border: none;
   border-radius: 999px;
-  background: #2563eb;
+  background: #60a5fa;
   color: white;
 
   text-decoration: none;
@@ -560,17 +560,17 @@ nav {
 
 .project-links a:hover,
 .project-links button:hover {
-  background: #1d4ed8;
+  background: #3b82f6;
   transform: translateY(-2px);
   box-shadow: 0 10px 22px rgba(37, 99, 235, 0.24);
 }
 
 .project-links .detail-btn {
-  background: #0f172a;
+  background: #2563eb;
 }
 
 .project-links .detail-btn:hover {
-  background: #020617;
+  background: #1d4ed8;
   box-shadow: 0 10px 22px rgba(15, 23, 42, 0.28);
 }
 
