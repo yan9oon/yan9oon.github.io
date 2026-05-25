@@ -358,23 +358,26 @@ nav {
 }
 
 .project-label {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  width: fit-content;
+  gap: 8px;
 
-  padding: 7px 13px;
-  margin-bottom: 14px;
+  margin: 0 0 12px 0;
 
-  background: #0f172a;
-  color: #ffffff;
-  border-radius: 999px;
-
-  font-size: 0.76rem;
+  color: #2563eb;
+  font-size: 0.78rem;
   font-weight: 800;
-  letter-spacing: 0.03em;
-  line-height: 1;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+}
 
-  box-shadow: 0 6px 14px rgba(15, 23, 42, 0.16);
+.project-label::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #2563eb;
+  flex-shrink: 0;
 }
 
 .project-card h4 {
