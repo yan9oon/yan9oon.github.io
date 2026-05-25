@@ -239,6 +239,7 @@
             Details
             </button>
           </div>
+          </div>
           </article>
 
           <article class="project-card">
@@ -375,5 +376,48 @@
   <footer>
     <p>© 2026 Yang Jiwon. All rights reserved.</p>
   </footer>
+    <script>
+    const detailButtons = document.querySelectorAll(".detail-btn");
+    const detailModal = document.getElementById("detailModal");
+    const detailModalImage = document.getElementById("detailModalImage");
+    const detailModalTitle = document.getElementById("detailModalTitle");
+    const detailModalClose = document.getElementById("detailModalClose");
+
+    detailButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const imageSrc = button.dataset.detailImg;
+        const card = button.closest(".project-card");
+        const title = card.querySelector("h4")?.textContent || "Project Details";
+
+        detailModalImage.src = imageSrc;
+        detailModalTitle.textContent = title;
+
+        detailModal.classList.add("is-open");
+        detailModal.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+      });
+    });
+
+    function closeDetailModal() {
+      detailModal.classList.remove("is-open");
+      detailModal.setAttribute("aria-hidden", "true");
+      detailModalImage.src = "";
+      document.body.style.overflow = "";
+    }
+
+    detailModalClose.addEventListener("click", closeDetailModal);
+
+    detailModal.addEventListener("click", (event) => {
+      if (event.target === detailModal) {
+        closeDetailModal();
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && detailModal.classList.contains("is-open")) {
+        closeDetailModal();
+      }
+    });
+  </script>
 </body>
 </html>
