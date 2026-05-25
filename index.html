@@ -28,7 +28,7 @@
           탐지 기준 수립부터 사고 대응 프로세스까지 이어지는 보안 운영 구조를 설계해왔습니다.
         </p>
         <div class="hero-buttons">
-          <a href="#projects">프로젝트 보기</a>
+          <a href="#projects">프로젝트 경험 보기</a>
         </div>
       </div>
 
@@ -59,15 +59,19 @@
         </div>
         <div>
           <strong>GitHub</strong>
-          <span><a href="https://github.com/yan9oon" target="_blank">github.com/yan9oon</a></span>
+          <span>
+            <a href="https://github.com/yan9oon" target="_blank" rel="noopener noreferrer">
+              github.com/yan9oon
+            </a>
+          </span>
         </div>
         <div>
           <strong>Velog</strong>
-<span>
-  <a href="https://velog.io/@didwl/posts" target="_blank" rel="noopener noreferrer">
-    velog.io/@didwl
-  </a>
-</span>
+          <span>
+            <a href="https://velog.io/@didwl/posts" target="_blank" rel="noopener noreferrer">
+              velog.io/@didwl
+            </a>
+          </span>
         </div>
       </div>
 
@@ -183,144 +187,143 @@
       </div>
     </section>
 
-<section id="projects" class="section projects-section">
-  <h2>Projects</h2>
+    <section id="projects" class="section projects-section">
+      <h2>Projects</h2>
 
-  <div class="project-category">
-    <h3>Research & External Activities</h3>
+      <div class="project-category">
+        <h3>Research & External Activities</h3>
 
-    <div class="project-grid">
-      <article class="project-card">
-        <div class="project-image">
-          <img src="./images/ack-2025-csp-visibility.png" alt="AWS와 국내 CSP 침해대응 가시성 및 추적성 분석 프로젝트 이미지">
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-image">
+              <img src="./images/ack-2025-csp-visibility.png" alt="AWS와 국내 CSP 침해대응 가시성 및 추적성 분석 프로젝트 이미지">
+            </div>
+
+            <div class="project-content">
+              <p class="project-label">Publication · ACK 2025</p>
+
+              <h4>AWS와 국내 CSP의 서비스 비교를 통한 국내 CSP 침해대응 가시성 및 추적성 분석</h4>
+
+              <p>
+                AWS와 NAVER Cloud, NHN Cloud, kt Cloud, Gabia Cloud의 보안·모니터링 서비스를 비교하고,
+                국내 CSP 환경에서 침해대응 시 확보 가능한 로그, 추적 정보, 탐지 가시성의 한계를 분석했습니다.
+              </p>
+
+              <p class="project-tech">
+                AWS · NAVER Cloud · NHN Cloud · kt Cloud · Gabia Cloud · Incident Response · Cloud Security
+              </p>
+
+              <div class="project-links">
+                <a href="https://ack.kips.or.kr/programBook/presentation/pdf/oral/KIPS_C2025B0329" target="_blank" rel="noopener noreferrer">Paper</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-image">
+              <img src="./images/baby-beavers.png" alt="AWS 멀티 어카운트 기반 침해사고 탐지 분석 대응 자동화 프로젝트 이미지">
+            </div>
+            <div class="project-content">
+              <p class="project-label">External Activity · Baby Beavers CERT</p>
+              <h4>AWS 멀티 어카운트 환경의 오픈소스 기반 침해사고 탐지·분석·대응 자동화 구현</h4>
+              <p>
+                AWS 멀티 어카운트 환경에서 로그 수집, OCSF 정규화, Wazuh 탐지,
+                TheHive·Jira·Discord 연동까지 이어지는 CERT 운영 환경을 구축했습니다.
+              </p>
+              <p class="project-tech">AWS · Wazuh · OCSF · TheHive · Jira · MISP · n8n</p>
+              <div class="project-links">
+                <a href="#" target="_blank">GitHub</a>
+                <a href="#" target="_blank">Medium</a>
+                <a href="./reports/baby-beavers-slides.pdf" target="_blank" rel="noopener noreferrer">Slides</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-image">
+              <img src="./images/cpr.png" alt="CPR 국내 클라우드 통합 모니터링 프로토타입 프로젝트 이미지">
+            </div>
+            <div class="project-content">
+              <p class="project-label">External Activity · KISIA ICT Crew</p>
+              <h4>CPR 국내 클라우드 통합 모니터링 프로토타입</h4>
+              <p>
+                NAVER, NHN, kt, Gabia 환경에서 통합 보안 모니터링이 가능한지 검증하고,
+                CSP별 로그 포맷 차이를 정규화해 탐지 파이프라인으로 연결했습니다.
+              </p>
+              <p class="project-tech">Python · Flask · React · MongoDB · Docker · Sigma Rule</p>
+              <div class="project-links">
+                <a href="#" target="_blank">GitHub</a>
+                <a href="#" target="_blank">Report</a>
+              </div>
+            </div>
+          </article>
         </div>
+      </div>
 
-        <div class="project-content">
-          <p class="project-label">Publication · ACK 2025</p>
+      <div class="project-category">
+        <h3>Academic & Independent Projects</h3>
 
-          <h4>AWS와 국내 CSP의 서비스 비교를 통한 국내 CSP 침해대응 가시성 및 추적성 분석</h4>
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-image">
+              <img src="./images/n2sf-guide.png" alt="N2SF 권한 기반 AWS 보안 가이드라인 프로젝트 이미지">
+            </div>
+            <div class="project-content">
+              <p class="project-label">Club Project · Securious</p>
+              <h4>N2SF 권한 기반 AWS 보안 가이드라인</h4>
+              <p>
+                N2SF 권한 통제항목을 AWS 환경에 적용하기 위한 보안 가이드라인을 작성하고,
+                IAM·S3·CloudTrail 기반 하드닝 전후 공격 재현 결과를 비교했습니다.
+              </p>
+              <p class="project-tech">AWS · IAM · S3 · CloudTrail · Terraform</p>
+              <div class="project-links">
+                <a href="#" target="_blank">GitHub</a>
+                <a href="#" target="_blank">Guide</a>
+              </div>
+            </div>
+          </article>
 
-          <p>
-            AWS와 NAVER Cloud, NHN Cloud, kt Cloud, Gabia Cloud의 보안·모니터링 서비스를 비교하고,
-            국내 CSP 환경에서 침해대응 시 확보 가능한 로그, 추적 정보, 탐지 가시성의 한계를 분석했습니다.
-          </p>
+          <article class="project-card">
+            <div class="project-image">
+              <img src="./images/secubank.png" alt="SecuBank DevSecOps 공급망 보안 파이프라인 프로젝트 이미지">
+            </div>
+            <div class="project-content">
+              <p class="project-label">Club Project · DevSecOps</p>
+              <h4>SecuBank DevSecOps 공급망 보안 파이프라인 [진행중]</h4>
+              <p>
+                코드 커밋부터 Kubernetes 배포까지 이어지는 공급망 보안 파이프라인을 설계하고,
+                Trivy, SBOM, Checkov, Security Gate를 통해 보안 검증 흐름을 구성하고 있습니다.
+              </p>
+              <p class="project-tech">Jenkins · Docker · Harbor · ArgoCD · Helm · Trivy · SBOM</p>
+              <div class="project-links">
+                <a href="#" target="_blank">GitHub</a>
+                <a href="#" target="_blank">Blog</a>
+              </div>
+            </div>
+          </article>
 
-          <p class="project-tech">
-            AWS · NAVER Cloud · NHN Cloud · kt Cloud · Gabia Cloud · Incident Response · Cloud Security
-          </p>
-
-          <div class="project-links">
-            <a href="https://ack.kips.or.kr/programBook/presentation/pdf/oral/KIPS_C2025B0329" target="_blank" rel="noopener noreferrer">Paper</a>
-          </div>
+          <article class="project-card">
+            <div class="project-image">
+              <img src="./images/human-risk-ml.png" alt="근로환경조사 기반 인적 보안 고위험군 예측 ML 프로젝트 이미지">
+            </div>
+            <div class="project-content">
+              <p class="project-label">Team Project · Security Data Analysis</p>
+              <h4>근로환경조사 기반 인적 보안 고위험군 예측 ML 프로젝트</h4>
+              <p>
+                제6차 근로환경조사 데이터를 활용해 직무 스트레스, 직장 내 폭언·괴롭힘 경험,
+                근로환경 만족도 등 인적 리스크 요인을 분석하고, 인적 보안 고위험군을 예측하는
+                머신러닝 모델을 개발했습니다.
+              </p>
+              <p class="project-tech">Python · Pandas · Scikit-learn · XGBoost · Random Forest · Security Data Analysis</p>
+              <div class="project-links">
+                <a href="#" target="_blank">GitHub</a>
+                <a href="#" target="_blank">Report</a>
+              </div>
+            </div>
+          </article>
         </div>
-      </article>
-
-      <article class="project-card">
-        <div class="project-image">
-          <img src="./images/baby-beavers.png" alt="AWS 멀티 어카운트 기반 침해사고 탐지 분석 대응 자동화 프로젝트 이미지">
-        </div>
-        <div class="project-content">
-          <p class="project-label">External Activity · Baby Beavers CERT</p>
-          <h4>AWS 멀티 어카운트 환경의 오픈소스 기반 침해사고 탐지·분석·대응 자동화 구현</h4>
-          <p>
-            AWS 멀티 어카운트 환경에서 로그 수집, OCSF 정규화, Wazuh 탐지,
-            TheHive·Jira·Discord 연동까지 이어지는 CERT 운영 환경을 구축했습니다.
-          </p>
-          <p class="project-tech">AWS · Wazuh · OCSF · TheHive · Jira · MISP · n8n</p>
-          <div class="project-links">
-            <a href="#" target="_blank">GitHub</a>
-            <a href="#" target="_blank">Medium</a>
-            <a href="#" target="_blank">Report</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="project-card">
-        <div class="project-image">
-          <img src="./images/cpr.png" alt="CPR 국내 클라우드 통합 모니터링 프로토타입 프로젝트 이미지">
-        </div>
-        <div class="project-content">
-          <p class="project-label">External Activity · KISIA ICT Crew</p>
-          <h4>CPR 국내 클라우드 통합 모니터링 프로토타입</h4>
-          <p>
-            NAVER, NHN, kt, Gabia 환경에서 통합 보안 모니터링이 가능한지 검증하고,
-            CSP별 로그 포맷 차이를 정규화해 탐지 파이프라인으로 연결했습니다.
-          </p>
-          <p class="project-tech">Python · Flask · React · MongoDB · Docker · Sigma Rule</p>
-          <div class="project-links">
-            <a href="#" target="_blank">GitHub</a>
-            <a href="#" target="_blank">Report</a>
-          </div>
-        </div>
-      </article>
-    </div>
-  </div>
-
-  <div class="project-category">
-    <h3>Academic & Independent Projects</h3>
-
-    <div class="project-grid">
-      <article class="project-card">
-        <div class="project-image">
-          <img src="./images/n2sf-guide.png" alt="N2SF 권한 기반 AWS 보안 가이드라인 프로젝트 이미지">
-        </div>
-        <div class="project-content">
-          <p class="project-label">Club Project · Securious</p>
-          <h4>N2SF 권한 기반 AWS 보안 가이드라인</h4>
-          <p>
-            N2SF 권한 통제항목을 AWS 환경에 적용하기 위한 보안 가이드라인을 작성하고,
-            IAM·S3·CloudTrail 기반 하드닝 전후 공격 재현 결과를 비교했습니다.
-          </p>
-          <p class="project-tech">AWS · IAM · S3 · CloudTrail · Terraform</p>
-          <div class="project-links">
-            <a href="#" target="_blank">GitHub</a>
-            <a href="#" target="_blank">Guide</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="project-card">
-        <div class="project-image">
-          <img src="./images/secubank.png" alt="SecuBank DevSecOps 공급망 보안 파이프라인 프로젝트 이미지">
-        </div>
-        <div class="project-content">
-          <p class="project-label">Club Project · DevSecOps</p>
-          <h4>SecuBank DevSecOps 공급망 보안 파이프라인[진행중]</h4>
-          <p>
-            코드 커밋부터 Kubernetes 배포까지 이어지는 공급망 보안 파이프라인을 설계하고,
-            Trivy, SBOM, Checkov, Security Gate를 통해 보안 검증 흐름을 구성하고 있습니다.
-          </p>
-          <p class="project-tech">Jenkins · Docker · Harbor · ArgoCD · Helm · Trivy · SBOM</p>
-          <div class="project-links">
-            <a href="#" target="_blank">GitHub</a>
-            <a href="#" target="_blank">Blog</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="project-card">
-        <div class="project-image">
-          <img src="./images/human-risk-ml.png" alt="근로환경조사 기반 인적 보안 고위험군 예측 ML 프로젝트 이미지">
-        </div>
-        <div class="project-content">
-          <p class="project-label">Team Project · Security Data Analysis</p>
-          <h4>근로환경조사 기반 인적 보안 고위험군 예측 ML 프로젝트</h4>
-          <p>
-            제6차 근로환경조사 데이터를 활용해 직무 스트레스, 직장 내 폭언·괴롭힘 경험,
-            근로환경 만족도 등 인적 리스크 요인을 분석하고, 인적 보안 고위험군을 예측하는
-            머신러닝 모델을 개발했습니다.
-          </p>
-          <p class="project-tech">Python · Pandas · Scikit-learn · XGBoost · Random Forest · Security Data Analysis</p>
-          <div class="project-links">
-            <a href="#" target="_blank">GitHub</a>
-            <a href="#" target="_blank">Report</a>
-          </div>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-    
+      </div>
+    </section>
   </main>
 
   <footer>
