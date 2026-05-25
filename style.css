@@ -106,12 +106,13 @@ nav {
   text-decoration: none;
   border-radius: 8px;
   font-weight: bold;
-  transition: background 0.25s ease, transform 0.25s ease;
+  transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .hero-buttons a:hover {
   background: #1d4ed8;
   transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(37, 99, 235, 0.22);
 }
 
 /* Profile Image */
@@ -121,8 +122,8 @@ nav {
 }
 
 .hero-image img {
-  width: 270px;
-  height: 270px;
+  width: 280px;
+  height: 280px;
   object-fit: cover;
   object-position: center 12%;
   border-radius: 50%;
@@ -130,6 +131,13 @@ nav {
   background: white;
   box-shadow: 0 16px 38px rgba(0, 0, 0, 0.16);
   display: block;
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+}
+
+.hero-image:hover img {
+  transform: translateY(-4px) scale(1.025);
+  border-color: #eff6ff;
+  box-shadow: 0 24px 52px rgba(37, 99, 235, 0.18);
 }
 
 /* Section */
@@ -420,12 +428,13 @@ nav {
   text-decoration: none;
   font-size: 13px;
   font-weight: 700;
-  transition: background 0.25s ease, transform 0.25s ease;
+  transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .project-links a:hover {
   background: #2563eb;
   transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(37, 99, 235, 0.22);
 }
 
 /* Footer */
@@ -517,11 +526,15 @@ footer p {
   }
 
   .hero-image img {
-    width: 210px;
-    height: 210px;
+    width: 218px;
+    height: 218px;
     object-fit: cover;
     object-position: center 12%;
     border: 5px solid white;
+  }
+
+  .hero-image:hover img {
+    transform: translateY(-3px) scale(1.02);
   }
 
   .section {
@@ -609,8 +622,8 @@ footer p {
   }
 
   .hero-image img {
-    width: 205px;
-    height: 205px;
+    width: 210px;
+    height: 210px;
     object-position: center 12%;
   }
 
