@@ -358,10 +358,23 @@ nav {
 }
 
 .project-label {
-  font-size: 13px !important;
-  color: #2563eb !important;
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+
+  padding: 7px 13px;
+  margin-bottom: 14px;
+
+  background: #0f172a;
+  color: #ffffff;
+  border-radius: 999px;
+
+  font-size: 0.76rem;
   font-weight: 800;
-  margin-bottom: 8px !important;
+  letter-spacing: 0.03em;
+  line-height: 1;
+
+  box-shadow: 0 6px 14px rgba(15, 23, 42, 0.16);
 }
 
 .project-card h4 {
