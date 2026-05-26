@@ -267,18 +267,6 @@ nav {
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
-.about-text::after {
-  content: "";
-  position: absolute;
-  right: -48px;
-  top: -48px;
-  width: 120px;
-  height: 120px;
-  background: #eff6ff;
-  border-radius: 50%;
-  z-index: 0;
-}
-
 .about-text:hover {
   transform: translateY(-6px);
   border-color: #93c5fd;
