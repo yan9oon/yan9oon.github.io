@@ -18,11 +18,12 @@ body {
 /* Header */
 
 .header {
-  background: white;
+  background: rgba(255, 255, 255, 0.94);
   border-bottom: 1px solid #e5e5e5;
   position: sticky;
   top: 0;
   z-index: 100;
+  backdrop-filter: blur(10px);
 }
 
 nav {
@@ -121,12 +122,10 @@ nav {
   width: 280px;
   height: 280px;
   flex-shrink: 0;
-
   border-radius: 50%;
   border: 6px solid white;
   background: white;
   box-shadow: 0 16px 38px rgba(0, 0, 0, 0.16);
-
   overflow: hidden;
   transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
 }
@@ -135,8 +134,7 @@ nav {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center center;
-
+  object-position: center 12%;
   display: block;
   transform: scale(1.07);
   transition: transform 0.28s ease;
@@ -200,12 +198,11 @@ nav {
   display: flex;
   flex-direction: column;
   gap: 8px;
-
   padding: 20px 22px;
   background: white;
   border: 1px solid #e5e7eb;
   border-radius: 16px;
-
+  min-width: 0;
   box-shadow: 0 10px 24px rgba(15, 23, 42, 0.04);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
@@ -238,12 +235,14 @@ nav {
   font-size: 16px;
   line-height: 1.6;
   word-break: keep-all;
+  overflow-wrap: anywhere;
 }
 
 .about-info a {
   color: #222;
   text-decoration: none;
   font-weight: 600;
+  overflow-wrap: anywhere;
 }
 
 .about-info a:hover {
@@ -292,11 +291,9 @@ nav {
   display: inline-block;
   margin-bottom: 14px;
   padding: 6px 11px;
-
   background: #eff6ff;
   color: #2563eb;
   border-radius: 999px;
-
   font-size: 13px;
   font-weight: 800;
 }
@@ -478,9 +475,7 @@ nav {
   display: flex;
   align-items: center;
   gap: 8px;
-
   margin: 0 0 12px 0;
-
   color: #2563eb;
   font-size: 0.78rem;
   font-weight: 800;
@@ -533,25 +528,20 @@ nav {
   width: 100%;
   min-height: 38px;
   padding: 9px 10px;
-
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   border: none;
   border-radius: 999px;
   background: #60a5fa;
   color: white;
-
   text-decoration: none;
   font-family: inherit;
   font-size: 13px;
   font-weight: 800;
   line-height: 1;
-
   cursor: pointer;
   white-space: nowrap;
-
   transition:
     background 0.25s ease,
     transform 0.25s ease,
@@ -580,11 +570,9 @@ nav {
   position: fixed;
   inset: 0;
   z-index: 999;
-
   display: none;
   align-items: center;
   justify-content: center;
-
   padding: 28px;
   background: rgba(15, 23, 42, 0.72);
   backdrop-filter: blur(6px);
@@ -598,7 +586,6 @@ nav {
   position: relative;
   width: min(1100px, 96vw);
   max-height: 90vh;
-
   background: white;
   border-radius: 20px;
   overflow: hidden;
@@ -610,7 +597,6 @@ nav {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-
   padding: 16px 20px;
   border-bottom: 1px solid #e5e7eb;
 }
@@ -626,16 +612,13 @@ nav {
 .detail-modal-close {
   width: 34px;
   height: 34px;
-
   border: none;
   border-radius: 50%;
   background: #f3f4f6;
   color: #111827;
-
   font-size: 22px;
   line-height: 1;
   cursor: pointer;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -693,8 +676,8 @@ footer p {
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
-    gap: 16px;
-    padding: 22px 16px;
+    gap: 14px;
+    padding: 22px 16px 18px;
   }
 
   .logo {
@@ -714,30 +697,32 @@ footer p {
   .hero {
     flex-direction: column-reverse;
     text-align: center;
-    padding: 60px 20px 90px;
-    gap: 38px;
+    padding: 60px 20px 84px;
+    gap: 36px;
   }
 
   .hero .tag {
-    font-size: 17px;
+    font-size: 16px;
+    line-height: 1.7;
     margin-bottom: 16px;
   }
 
   .hero h2 {
-    font-size: 28px;
-    line-height: 1.38;
+    font-size: 25px;
+    line-height: 1.45;
     letter-spacing: -1px;
-    margin-bottom: 22px;
+    margin-bottom: 20px;
   }
 
   .hero p {
     font-size: 16px;
-    line-height: 1.7;
+    line-height: 1.75;
   }
 
   .hero-buttons {
     justify-content: center;
     margin-top: 28px;
+    flex-wrap: wrap;
   }
 
   .hero-buttons a {
@@ -745,16 +730,22 @@ footer p {
     font-size: 15px;
   }
 
+  .hero-image {
+    width: 230px;
+    height: 230px;
+  }
+
   .hero-image img {
-    width: 218px;
-    height: 218px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     object-position: center 12%;
-    border: 5px solid white;
+    border: none;
+    transform: scale(1.08);
   }
 
   .hero-image:hover img {
-    transform: translateY(-3px) scale(1.02);
+    transform: scale(1.1);
   }
 
   .section {
@@ -769,8 +760,12 @@ footer p {
     font-size: 16px;
   }
 
-  .about-info div {
+  .about-info,
+  .about-story {
     grid-template-columns: 1fr;
+  }
+
+  .about-info div {
     gap: 6px;
   }
 
@@ -808,7 +803,8 @@ footer p {
   }
 
   .project-image {
-    height: 190px;
+    height: auto;
+    aspect-ratio: 2 / 1;
   }
 
   .project-content {
@@ -817,6 +813,16 @@ footer p {
 
   .project-card h4 {
     font-size: 20px;
+  }
+
+  .detail-modal {
+    padding: 14px;
+  }
+
+  .detail-modal-content {
+    width: 96vw;
+    max-height: 86vh;
+    border-radius: 16px;
   }
 }
 
@@ -834,16 +840,21 @@ footer p {
   }
 
   .hero {
-    padding: 55px 18px 80px;
+    padding: 55px 18px 78px;
   }
 
   .hero h2 {
-    font-size: 27px;
+    font-size: 24px;
+  }
+
+  .hero-image {
+    width: 210px;
+    height: 210px;
   }
 
   .hero-image img {
-    width: 210px;
-    height: 210px;
+    width: 100%;
+    height: 100%;
     object-position: center 12%;
   }
 
@@ -854,9 +865,5 @@ footer p {
 
   .hero-buttons a {
     padding: 11px 16px;
-  }
-
-  .project-image {
-    height: 180px;
   }
 }
