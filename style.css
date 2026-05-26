@@ -207,6 +207,21 @@ nav {
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
+.about-lead {
+  max-width: 860px;
+  margin-top: 18px;
+  margin-bottom: 36px;
+  font-size: 22px;
+  line-height: 1.75;
+  font-weight: 500;
+  color: #111827;
+}
+
+.about-lead strong {
+  color: #2563eb;
+  font-weight: 800;
+}
+
 .about-info div::before {
   content: "";
   position: absolute;
@@ -216,6 +231,24 @@ nav {
   height: 28px;
   background: #2563eb;
   border-radius: 0 999px 999px 0;
+}
+
+.about-info-card h3,
+.about-card-title {
+  font-size: 15px;
+  font-weight: 800;
+  color: #2563eb;
+  margin-bottom: 10px;
+}
+
+.about-info-card p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #111827;
+}
+
+.about-info-card p strong {
+  font-weight: 800;
 }
 
 .about-info div:hover {
