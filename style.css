@@ -35,7 +35,8 @@ nav {
   align-items: center;
 }
 
-.logo {
+.logo,
+.logo:visited {
   font-size: 22px;
   font-weight: 700;
   color: #222;
@@ -46,6 +47,7 @@ nav {
 
 .logo:hover {
   color: #2563eb;
+  text-decoration: none;
 }
 
 .nav-menu {
